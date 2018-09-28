@@ -1,0 +1,25 @@
+#!/bin/bash
+
+sudo apt update
+sudo apt dist-upgrade
+sudo apt apt clean
+
+echo 'Pauls_setup_Script:'
+echo 'Please enter the name of the pi being set up:'
+read pi_name
+
+cd $HOME
+mkdir "$HOME/.myscripts"
+
+echo 'export PATH="$PATH:$HOME/.myscripts"' >> $HOME/.profile
+
+mkdir "$HOME/pi_name_staging"
+mkdir "$HOME/pi_name_admin_tools"
+mkdir "$HOME/pi_name_all_repo_store"
+mkdir "$HOME/pi_name_git_dir"
+
+cd $HOME/pi_name_admin_tool
+gitpull https://github.com/PaulAmbrose/python_git_manager.git
+
+cd $HOME/pi_name_git_dir
+gitpull https://github.com/PaulAmbrose/git_dir.git
