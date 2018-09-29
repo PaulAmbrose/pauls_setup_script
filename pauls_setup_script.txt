@@ -1,10 +1,13 @@
 #!/bin/bash
 
+echo "Paul's Setup Started"
+
 sudo apt update
 sudo apt dist-upgrade
-sudo apt apt clean
+sudo apt clean
 
-echo 'Pauls_setup_Script:'
+echo "update and clean complete"
+
 echo 'Please enter the name of the pi being set up:'
 read pi_name
 
