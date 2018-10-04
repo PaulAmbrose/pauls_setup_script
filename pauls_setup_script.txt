@@ -1,5 +1,38 @@
 #!/bin/bash
 
+
+#1-SETUP
+	#rasbian updates
+	#get pi name from user
+	#create folders:  .myscripts, admin, staging, tools, store, git_dir
+	#pull repositories:  Git manager to tools, git dir to tools
+	
+#2-PASSWORDS AND SECURITY
+	#https://makezine.com/2017/09/07/secure-your-raspberry-pi-against-attackers/
+		#create new account
+		#Add to superuser group
+		#change password
+		#change root password	
+		#disable standard
+		#secure SSH
+		#Configure firewall
+		#Setup unattended backups
+		#Install logwatch
+
+#3-CHANGE CONFIGSETTINGS
+	#Alter screen resolution
+	#Background
+	#Fonts
+	#Menu system and selected programs
+
+4#-DOWNLOAD KEY PYTHON LIBRARIES
+
+#4-CLEANING AND MAINT
+	#Set up automated house keeping to empty trash and clear downloads
+	#Set up warning if SD is becoming full
+	#Check for updates and run, reset config setting if updates again
+	
+
 echo "Paul's Setup Started"
 
 sudo apt update
