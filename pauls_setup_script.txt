@@ -1,6 +1,36 @@
 #!/bin/bash
 
 
+#0-Change passwords:
+	#Get user input re new passwords for root and pi (pi default is "raspberry", root default is 
+		>> echo Please enter a new password for "root":
+		>> read password_root
+		>> echo please enter a new password for "pi":
+		>> read password_pi
+        
+	#change the passwords
+		>> passwd
+		>> "raspberry" <enter>
+		>> password_pi
+		>> su root
+		>> "raspbery" <enter>
+		>> passwd
+		>> password_root
+	
+	#save the passwords in a text file on the desktop
+
+		>> cd /home/pi/Desktop
+		>> touch passwords.txt
+		>> password_root > passwords.txt
+		>> password_pi > passwords.txt
+
+#################use?
+yes newpassword | passwd youruser
+echo 'pi:newpassword' | chpasswd # change user pi password to newpassword
+
+
+
+
 #1-SETUP
 	#rasbian updates
 	#get pi name from user
@@ -33,7 +63,17 @@
 	#Check for updates and run, reset config setting if updates again
 	
 
+
+
+
+
+
+
+
+
 echo "Paul's Setup Started"
+
+
 
 sudo apt update
 sudo apt dist-upgrade
@@ -59,3 +99,13 @@ gitpull https://github.com/PaulAmbrose/python_git_manager.git
 
 cd $HOME/pi_name_git_dir
 gitpull https://github.com/PaulAmbrose/git_dir.git
+
+
+
+
+~~~~~~~~~~~~TEST CODE RE VARIABLES
+#!/bin/bash
+# Ask the user for their name
+echo Hello, who am I talking to?
+read varname
+echo It\'s nice to meet you $varname
